@@ -18,7 +18,7 @@ jobs:
         
       - name: Check if PR exists
         run: |
-          PR_EXISTS=$(gh pr list -B master -H upstream/master --json number | jq '. | length')
+          PR_EXISTS=$(gh pr list -B upstream/master -H master --json number | jq '. | length')
           echo "PR_EXISTS=$PR_EXISTS" >> $GITHUB_ENV
 
       - name: Create Pull Request (if none exists) 
