@@ -3,7 +3,7 @@ name: Pull Request into Fork from Upstream Repo on Push
 on:
   push:
     branches: [ "master" ]
- 
+
 jobs:
   crete_pull_request:
     runs-on: ubuntu-latest
