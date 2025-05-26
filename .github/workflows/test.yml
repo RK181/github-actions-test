@@ -8,7 +8,7 @@ jobs:
   crete_pull_request:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      GITHUB_TOKEN: ${{ secrets.ACTION }}
 
     steps:
       - name: Checkout repository
@@ -22,5 +22,3 @@ jobs:
       - name: Create Pull Request (if none exists) 
         if: env.PR_EXISTS == '0'
         run: gh pr create --repo https://github.com/yotunfut/github-actions-test -B master --title 'Merge upstream master into fork master' --body 'Created by GitHub Actions'
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACTION }}
