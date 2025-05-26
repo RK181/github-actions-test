@@ -25,4 +25,4 @@ jobs:
         if: env.PR_EXISTS == '0'
         run: gh pr create --repo https://github.com/yotunfut/github-actions-test -B master -H upstream/master --title 'Merge fork master into upstream master' --body 'Created by Github action'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACTION }}
