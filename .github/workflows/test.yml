@@ -8,7 +8,7 @@ jobs:
   crete_pull_request:
     runs-on: ubuntu-latest
     env:
-      GITHUB_TOKEN: ${{ secrets.ACTION }}
+      GITHUB_TOKEN: ${{ secrets.TEST }}
 
     steps:
       - name: Checkout repository
