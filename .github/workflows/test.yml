@@ -23,6 +23,6 @@ jobs:
 
       - name: Create Pull Request (if none exists) 
         if: env.PR_EXISTS == '0'
-        run: gh pr create --repo https://github.com/yotunfut/github-actions-test -B master  --title 'Merge fork master into upstream master' --body 'Created by Github action'
+        run: gh pr create --repo https://github.com/yotunfut/github-actions-test -B master --title 'Merge upstream master into fork master' --body 'Created by Github action'
         env:
           GITHUB_TOKEN: ${{ secrets.ACTION }}
