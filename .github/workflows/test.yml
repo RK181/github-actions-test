@@ -18,7 +18,7 @@ jobs:
         
       - name: Check if PR exists
         run: |
-          PR_EXISTS=$(gh pr list --repo https://github.com/yotunfut/github-actions-test -B master -H upstream/master --json number | jq '. | length')
+          PR_EXISTS=$(gh pr list --repo https://github.com/yotunfut/github-actions-test -B master --json number | jq '. | length')
           echo "PR_EXISTS=$PR_EXISTS" >> $GITHUB_ENV
 
       - name: Create Pull Request (if none exists) 
